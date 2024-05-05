@@ -65,6 +65,7 @@ jobs:
 
       - name: Download ROM‌‌...
         run: |
+          sudo su
           cd $GITHUB_WORKSPACE/Tool-SGSI-build
           mkdir ./tmp
           wget -U "Mozilla/5.0" ${{ github.event.inputs.ROM_URL }} -O "$GITHUB_WORKSPACE/Tool-SGSI-build/tmp/${{ github.event.inputs.ZIP_NAME }}"
